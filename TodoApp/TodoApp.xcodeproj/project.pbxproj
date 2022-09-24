@@ -13,6 +13,11 @@
 		199173F328DEB160004A045B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199173F128DEB160004A045B /* Main.storyboard */; };
 		199173F528DEB163004A045B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199173F428DEB163004A045B /* Assets.xcassets */; };
 		199173F828DEB163004A045B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199173F628DEB163004A045B /* LaunchScreen.storyboard */; };
+		1991740528DEB6A9004A045B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1991740028DEB6A9004A045B /* Roboto-Light.ttf */; };
+		1991740628DEB6A9004A045B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1991740128DEB6A9004A045B /* Roboto-Regular.ttf */; };
+		1991740728DEB6A9004A045B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1991740228DEB6A9004A045B /* Roboto-Bold.ttf */; };
+		1991740828DEB6A9004A045B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1991740328DEB6A9004A045B /* Roboto-Black.ttf */; };
+		1991740928DEB6A9004A045B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1991740428DEB6A9004A045B /* Roboto-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		199173F428DEB163004A045B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		199173F728DEB163004A045B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		199173F928DEB163004A045B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1991740028DEB6A9004A045B /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		1991740128DEB6A9004A045B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		1991740228DEB6A9004A045B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		1991740328DEB6A9004A045B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		1991740428DEB6A9004A045B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		199173EA28DEB160004A045B /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				199173FF28DEB68C004A045B /* Fonts */,
 				199173EB28DEB160004A045B /* AppDelegate.swift */,
 				199173ED28DEB160004A045B /* SceneDelegate.swift */,
 				199173EF28DEB160004A045B /* ViewController.swift */,
@@ -65,6 +76,18 @@
 				199173F928DEB163004A045B /* Info.plist */,
 			);
 			path = TodoApp;
+			sourceTree = "<group>";
+		};
+		199173FF28DEB68C004A045B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1991740328DEB6A9004A045B /* Roboto-Black.ttf */,
+				1991740228DEB6A9004A045B /* Roboto-Bold.ttf */,
+				1991740028DEB6A9004A045B /* Roboto-Light.ttf */,
+				1991740428DEB6A9004A045B /* Roboto-Medium.ttf */,
+				1991740128DEB6A9004A045B /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +148,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1991740928DEB6A9004A045B /* Roboto-Medium.ttf in Resources */,
 				199173F828DEB163004A045B /* LaunchScreen.storyboard in Resources */,
 				199173F528DEB163004A045B /* Assets.xcassets in Resources */,
+				1991740728DEB6A9004A045B /* Roboto-Bold.ttf in Resources */,
+				1991740628DEB6A9004A045B /* Roboto-Regular.ttf in Resources */,
+				1991740828DEB6A9004A045B /* Roboto-Black.ttf in Resources */,
+				1991740528DEB6A9004A045B /* Roboto-Light.ttf in Resources */,
 				199173F328DEB160004A045B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +334,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +362,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
