@@ -11,6 +11,7 @@ struct GaleryCellViewModel {
     var url: String
 }
 
+//Represenet json data
 struct Galery: Decodable {
     var id: Int
     var url: String

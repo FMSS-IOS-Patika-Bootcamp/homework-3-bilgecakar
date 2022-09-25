@@ -11,10 +11,9 @@ class GaleryCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var galeryImageView: UIImageView! {
         didSet {
-            galeryImageView.layer.cornerRadius = 15
+            galeryImageView.layer.cornerRadius = 15 //Add corner radius on ImageView
         }
     }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

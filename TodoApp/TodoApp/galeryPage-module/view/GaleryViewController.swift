@@ -22,15 +22,16 @@ class GaleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        screenSize = UIScreen.main.bounds
-        screenWidth = self.screenSize.size.width
+        //Customize collectionview
+        screenSize = UIScreen.main.bounds  //Represent app's screen size
+        screenWidth = self.screenSize.size.width //Represent app's screen width
         
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 25, bottom: 5, right: 25)
-        layout.itemSize = CGSize(width: (screenWidth - 80 )/3, height: screenWidth*0.3)
-        layout.minimumInteritemSpacing = 15
-        layout.minimumLineSpacing = 10
-        galeryCollectionView.collectionViewLayout = layout
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout() //Use UICollectionViewFlowLayout in order to customize collectionview
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 15) //Represenet distance between colletionview to superview
+        layout.itemSize = CGSize(width: (screenWidth - 60 )/3, height: screenWidth*0.25) //Calculate hıw many cells to display
+        layout.minimumInteritemSpacing = 10 //Represent distance between two cells
+        layout.minimumLineSpacing = 10 //Represent distance between two row
+        galeryCollectionView.collectionViewLayout = layout //Add design on collectionview
         
         galeryCollectionView.delegate = self
         galeryCollectionView.dataSource = self
@@ -39,7 +40,8 @@ class GaleryViewController: UIViewController {
         viewModel.didViewLoad()
         
         registerCell()
-        
+    
+        //When loading images, display activity indicator
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
@@ -80,6 +82,7 @@ extension GaleryViewController: UICollectionViewDataSource, UICollectionViewDele
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GaleryCollectionViewCell.self), for: indexPath) as! GaleryCollectionViewCell
         DispatchQueue.main.async {
             cell.galeryImageView.kf.setImage(with: URL(string: "\( self.items[indexPath.row].url)"))
+            //When loading is finish, activity indicator is hidden
             self.activityIndicator.isHidden = true
             self.activityIndicator.stopAnimating()
         }

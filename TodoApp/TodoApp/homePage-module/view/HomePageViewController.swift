@@ -10,6 +10,13 @@ import UIKit
 class HomePageViewController: UIViewController {
     
     @IBOutlet weak var postsTableview: UITableView!
+    @IBOutlet weak var yellowView: UIView! {
+        didSet {
+            yellowView.layer.cornerRadius = 20
+            yellowView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        }
+    }
+    @IBOutlet weak var yellowActivityIndicator: UIActivityIndicatorView!
     
     private let viewModel = PostsViewModel()
     private var items: [PostCellViewModel] = []
@@ -24,6 +31,8 @@ class HomePageViewController: UIViewController {
         viewModel.didViewLoad()
         registerCell()
         
+        yellowActivityIndicator.isHidden = false
+        yellowActivityIndicator.startAnimating()
         
     }
     
@@ -39,6 +48,8 @@ extension HomePageViewController: PostsViewModelProtocol {
         
         DispatchQueue.main.async {
             self.postsTableview.reloadData()
+            self.yellowActivityIndicator.isHidden = true
+            self.yellowActivityIndicator.stopAnimating()
         }
     }
     

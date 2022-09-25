@@ -36,7 +36,6 @@ private extension GaleryViewModel {
         return galery.map{ .init(url: $0.url)
             
         }
-        
     }
 }
 
@@ -50,6 +49,5 @@ extension GaleryViewModel: GaleryModelProtocol {
         } else {
             delegate?.showEmptyView()
         }
-
     }
 }
