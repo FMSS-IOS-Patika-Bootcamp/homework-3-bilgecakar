@@ -27,6 +27,12 @@
 		1991741C28E01ED0004A045B /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991741B28E01ED0004A045B /* PostsViewModel.swift */; };
 		1991741E28E01F97004A045B /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991741D28E01F97004A045B /* PostModel.swift */; };
 		1991742628E024A9004A045B /* PostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991742528E024A9004A045B /* PostEntity.swift */; };
+		1991742F28E05ED9004A045B /* GaleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991742D28E05ED9004A045B /* GaleryCollectionViewCell.swift */; };
+		1991743028E05ED9004A045B /* GaleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1991742E28E05ED9004A045B /* GaleryCollectionViewCell.xib */; };
+		1991743228E05F89004A045B /* GaleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991743128E05F89004A045B /* GaleryCell.swift */; };
+		1991743428E06041004A045B /* GaleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991743328E06041004A045B /* GaleryModel.swift */; };
+		1991743628E060CE004A045B /* GaleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991743528E060CE004A045B /* GaleryViewModel.swift */; };
+		1991743928E066F7004A045B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1991743828E066F7004A045B /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,11 @@
 		1991741B28E01ED0004A045B /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		1991741D28E01F97004A045B /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		1991742528E024A9004A045B /* PostEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEntity.swift; sourceTree = "<group>"; };
+		1991742D28E05ED9004A045B /* GaleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		1991742E28E05ED9004A045B /* GaleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GaleryCollectionViewCell.xib; sourceTree = "<group>"; };
+		1991743128E05F89004A045B /* GaleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryCell.swift; sourceTree = "<group>"; };
+		1991743328E06041004A045B /* GaleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryModel.swift; sourceTree = "<group>"; };
+		1991743528E060CE004A045B /* GaleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1991743928E066F7004A045B /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +192,7 @@
 		1991742828E05D20004A045B /* model */ = {
 			isa = PBXGroup;
 			children = (
+				1991743328E06041004A045B /* GaleryModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -187,6 +200,7 @@
 		1991742928E05D29004A045B /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1991740A28E011F2004A045B /* GaleryViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -194,7 +208,7 @@
 		1991742A28E05D2F004A045B /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1991740A28E011F2004A045B /* GaleryViewController.swift */,
+				1991743528E060CE004A045B /* GaleryViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -202,6 +216,8 @@
 		1991742B28E05D35004A045B /* collectionview */ = {
 			isa = PBXGroup;
 			children = (
+				1991742D28E05ED9004A045B /* GaleryCollectionViewCell.swift */,
+				1991742E28E05ED9004A045B /* GaleryCollectionViewCell.xib */,
 			);
 			path = collectionview;
 			sourceTree = "<group>";
@@ -209,6 +225,7 @@
 		1991742C28E05D3F004A045B /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				1991743128E05F89004A045B /* GaleryCell.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -229,6 +246,9 @@
 			dependencies = (
 			);
 			name = TodoApp;
+			packageProductDependencies = (
+				1991743828E066F7004A045B /* Kingfisher */,
+			);
 			productName = TodoApp;
 			productReference = 199173E828DEB160004A045B /* TodoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +277,9 @@
 				Base,
 			);
 			mainGroup = 199173DF28DEB15F004A045B;
+			packageReferences = (
+				1991743728E066F7004A045B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 199173E928DEB160004A045B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -275,6 +298,7 @@
 				199173F828DEB163004A045B /* LaunchScreen.storyboard in Resources */,
 				199173F528DEB163004A045B /* Assets.xcassets in Resources */,
 				1991741A28E01CB8004A045B /* PostTableViewCell.xib in Resources */,
+				1991743028E05ED9004A045B /* GaleryCollectionViewCell.xib in Resources */,
 				1991740728DEB6A9004A045B /* Roboto-Bold.ttf in Resources */,
 				1991740628DEB6A9004A045B /* Roboto-Regular.ttf in Resources */,
 				1991740828DEB6A9004A045B /* Roboto-Black.ttf in Resources */,
@@ -298,9 +322,13 @@
 				1991741928E01CB8004A045B /* PostTableViewCell.swift in Sources */,
 				199173F028DEB160004A045B /* HomePageViewController.swift in Sources */,
 				199173EC28DEB160004A045B /* AppDelegate.swift in Sources */,
+				1991742F28E05ED9004A045B /* GaleryCollectionViewCell.swift in Sources */,
 				1991741228E015A2004A045B /* Task.swift in Sources */,
+				1991743228E05F89004A045B /* GaleryCell.swift in Sources */,
+				1991743428E06041004A045B /* GaleryModel.swift in Sources */,
 				1991741C28E01ED0004A045B /* PostsViewModel.swift in Sources */,
 				199173EE28DEB160004A045B /* SceneDelegate.swift in Sources */,
+				1991743628E060CE004A045B /* GaleryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +548,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1991743728E066F7004A045B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1991743828E066F7004A045B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1991743728E066F7004A045B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1991740E28E014B1004A045B /* TaskInfo.xcdatamodeld */ = {

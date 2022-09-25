@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -86,10 +87,50 @@
                     <view key="view" contentMode="scaleToFill" id="tf2-M6-fYS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xd3-Nz-Sq8">
+                                <rect key="frame" x="32" y="76" width="350" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x0t-m6-uq2">
+                                <rect key="frame" x="0.0" y="117.5" width="414" height="695.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BzU-Bw-F5M">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GaleryCollectionViewCell" id="2VV-wp-xiQ" customClass="GaleryCollectionViewCell" customModule="TodoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="enA-AS-PSR">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UrY-x4-OLk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xd3-Nz-Sq8" firstAttribute="leading" secondItem="UrY-x4-OLk" secondAttribute="leading" constant="32" id="D4E-RM-1E6"/>
+                            <constraint firstItem="x0t-m6-uq2" firstAttribute="leading" secondItem="UrY-x4-OLk" secondAttribute="leading" id="Gph-oL-Xb9"/>
+                            <constraint firstItem="UrY-x4-OLk" firstAttribute="trailing" secondItem="x0t-m6-uq2" secondAttribute="trailing" id="IWr-im-Gy8"/>
+                            <constraint firstItem="x0t-m6-uq2" firstAttribute="top" secondItem="Xd3-Nz-Sq8" secondAttribute="bottom" constant="20" id="SOl-ID-4oB"/>
+                            <constraint firstItem="Xd3-Nz-Sq8" firstAttribute="top" secondItem="UrY-x4-OLk" secondAttribute="top" constant="32" id="cX2-k8-AFQ"/>
+                            <constraint firstItem="UrY-x4-OLk" firstAttribute="bottom" secondItem="x0t-m6-uq2" secondAttribute="bottom" id="eKf-jy-bjV"/>
+                            <constraint firstItem="UrY-x4-OLk" firstAttribute="trailing" secondItem="Xd3-Nz-Sq8" secondAttribute="trailing" constant="32" id="pYT-wl-LAH"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Galery" image="photo.on.rectangle.angled" catalog="system" id="5tt-DA-Gg7"/>
+                    <connections>
+                        <outlet property="galeryCollectionView" destination="x0t-m6-uq2" id="gHo-Ws-8UX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxm-Mw-HfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

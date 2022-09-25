@@ -24,6 +24,7 @@ class HomePageViewController: UIViewController {
         viewModel.didViewLoad()
         registerCell()
         
+        
     }
     
     //Register cell
