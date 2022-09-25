@@ -84,13 +84,13 @@
 		199173EA28DEB160004A045B /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
-				1991741F28E02260004A045B /* homepage-module */,
-				199173FF28DEB68C004A045B /* Fonts */,
+				199173FF28DEB68C004A045B /* fonts */,
+				1991742728E05D07004A045B /* galeryPage-module */,
+				1991741F28E02260004A045B /* homePage-module */,
 				199173EB28DEB160004A045B /* AppDelegate.swift */,
 				199173ED28DEB160004A045B /* SceneDelegate.swift */,
 				199173F128DEB160004A045B /* Main.storyboard */,
 				1991740C28E0123B004A045B /* TodoViewController.swift */,
-				1991740A28E011F2004A045B /* GaleryViewController.swift */,
 				199173F428DEB163004A045B /* Assets.xcassets */,
 				199173F628DEB163004A045B /* LaunchScreen.storyboard */,
 				199173F928DEB163004A045B /* Info.plist */,
@@ -100,7 +100,7 @@
 			path = TodoApp;
 			sourceTree = "<group>";
 		};
-		199173FF28DEB68C004A045B /* Fonts */ = {
+		199173FF28DEB68C004A045B /* fonts */ = {
 			isa = PBXGroup;
 			children = (
 				1991740328DEB6A9004A045B /* Roboto-Black.ttf */,
@@ -109,10 +109,10 @@
 				1991740428DEB6A9004A045B /* Roboto-Medium.ttf */,
 				1991740128DEB6A9004A045B /* Roboto-Regular.ttf */,
 			);
-			path = Fonts;
+			path = fonts;
 			sourceTree = "<group>";
 		};
-		1991741F28E02260004A045B /* homepage-module */ = {
+		1991741F28E02260004A045B /* homePage-module */ = {
 			isa = PBXGroup;
 			children = (
 				1991742428E02485004A045B /* entity */,
@@ -121,7 +121,7 @@
 				1991742228E0228F004A045B /* view */,
 				1991742028E0227A004A045B /* model */,
 			);
-			path = "homepage-module";
+			path = "homePage-module";
 			sourceTree = "<group>";
 		};
 		1991742028E0227A004A045B /* model */ = {
@@ -161,6 +161,54 @@
 			isa = PBXGroup;
 			children = (
 				1991742528E024A9004A045B /* PostEntity.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		1991742728E05D07004A045B /* galeryPage-module */ = {
+			isa = PBXGroup;
+			children = (
+				1991742C28E05D3F004A045B /* entity */,
+				1991742B28E05D35004A045B /* collectionview */,
+				1991742A28E05D2F004A045B /* viewModel */,
+				1991742928E05D29004A045B /* view */,
+				1991742828E05D20004A045B /* model */,
+			);
+			path = "galeryPage-module";
+			sourceTree = "<group>";
+		};
+		1991742828E05D20004A045B /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		1991742928E05D29004A045B /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1991742A28E05D2F004A045B /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1991740A28E011F2004A045B /* GaleryViewController.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		1991742B28E05D35004A045B /* collectionview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = collectionview;
+			sourceTree = "<group>";
+		};
+		1991742C28E05D3F004A045B /* entity */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = entity;
 			sourceTree = "<group>";
