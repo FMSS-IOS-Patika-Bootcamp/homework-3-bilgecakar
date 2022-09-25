@@ -11,6 +11,7 @@ import Kingfisher
 class GaleryViewController: UIViewController {
     
     @IBOutlet weak var galeryCollectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     private let viewModel = GaleryViewModel()
     private var items: [GaleryCellViewModel] = []
     
@@ -39,7 +40,9 @@ class GaleryViewController: UIViewController {
         
         registerCell()
         
-        print(items.count)
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
     }
     
     //Register cell
@@ -77,6 +80,8 @@ extension GaleryViewController: UICollectionViewDataSource, UICollectionViewDele
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: GaleryCollectionViewCell.self), for: indexPath) as! GaleryCollectionViewCell
         DispatchQueue.main.async {
             cell.galeryImageView.kf.setImage(with: URL(string: "\( self.items[indexPath.row].url)"))
+            self.activityIndicator.isHidden = true
+            self.activityIndicator.stopAnimating()
         }
         return cell
     }
